@@ -20,6 +20,7 @@ int dx[4] = { 1,0,-1,0 };
 int dy[4] = { 0 ,1,0,-1 };
 int minValue=987654321, redHoll, blueHoll, N,M, redX ,redY ,blueX, blueY;
 
+/*
 void print() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
@@ -29,7 +30,7 @@ void print() {
 	printf("---------------------\n");
 	//printf("%d %d %d %d", redX, redY, blueX, blueY);
 }
-
+*/
 int swapCheck(int firstX, int firstY, int secondX, int secondY, int dir) {  //dir 우 하 좌 상 // 우일땐 우측공 먼저, 하일땐 아래공 먼저, 좌일땐 좌측공 먼저, 상일땐 위쪽 공 먼저, return 1이면 순서 스왑
 	if (dir == 0 && (secondX > firstX) ) return 1;
 	if (dir == 1 && (secondY > firstY) ) return 1;
@@ -95,10 +96,12 @@ void dfs(int firstX, int firstY, int secondX, int secondY, int depth) {
 			}
 			count++;
 		}
+		/*
 		printf("redx : %d @@ redY : %d @@ blueX : %d @@ blueY : %d @@ depth : %d \n", firstX, firstY, secondX, secondY, depth);
 		print();
 		_getch();
-
+		*/
+		
 		if (redHoll == 0 && blueHoll == 0) {  // 만약 둘 다 아직 안들어 갔으면 다음 dfs 호출
 			dfs(nextFisrtX, nextFisrtY, nextsecondX, nextsecondY, depth + 1);
 			redHoll = 0, blueHoll = 0;
