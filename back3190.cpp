@@ -1,6 +1,7 @@
 // 백준 3190 뱀
 // 한번에 성공
 // 문제 잘 읽기, 이동 후 방향전환이니깐 함수 순서 잘 지키기
+// 푼시간 총 1시간 40분  // 설계 30분 구현 30분 테스트 40
 #define _CRT_SECURE_NO_WARNINGS
 #include<cstdio>
 #include<queue>
